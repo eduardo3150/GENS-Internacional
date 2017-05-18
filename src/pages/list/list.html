@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Información</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of contents" (click)="viewItem(item);">      
+      <ion-avatar item-left>
+        <img [src]="item.img">
+      </ion-avatar>
+      <h2> {{item.titulo | uppercase}} </h2>     
+    </button>
+  </ion-list>
+</ion-content>
